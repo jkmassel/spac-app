@@ -29,14 +29,10 @@ class PlayerViewController: AVPlayerViewController {
 		self.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
+		//Schedule the player setup on the next view layout cycle
 		DispatchQueue.main.async {
 			self.player = AVPlayer(url: self.url)
 			self.player?.play()

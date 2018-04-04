@@ -39,12 +39,6 @@ class SeriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-
 		self.view.addSubview(self.seriesImageView)
 		self.seriesImageView.snp.makeConstraints { (make) in
 			make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
@@ -76,11 +70,6 @@ class SeriesViewController: UIViewController {
 		//Set up the table view
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 
