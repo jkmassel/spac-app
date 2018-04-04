@@ -1,0 +1,23 @@
+PODS:
+  - PromisesObjC (1.0.7)
+  - PromisesSwift (1.0.7):
+    - PromisesObjC (= 1.0.7)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - PromisesSwift (~> 1.0)
+  - SDWebImage (~> 4.0)
+  - SnapKit (~> 4.0)
+
+SPEC CHECKSUMS:
+  PromisesObjC: e188094093ab3be6d2b975583e5c12022ad98c4f
+  PromisesSwift: 60f58ca196d891f290477a58e888eb97ac17ff49
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 43259cbe0f744de2d3918a2cae3e4ee06e58ea9e
+
+COCOAPODS: 1.4.0
