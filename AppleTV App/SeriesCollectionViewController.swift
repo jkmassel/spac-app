@@ -62,10 +62,12 @@ class SeriesCollectionViewCell: UICollectionViewCell{
 class SeriesCollectionViewController: UICollectionViewController {
 
 	var series: [Series] = []
+	private let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
 
 	init() {
 		let layout = UICollectionViewFlowLayout()
 		layout.itemSize = CGSize(width: 470, height: 270)
+
 		//as recommended by https://developer.apple.com/tvos/human-interface-guidelines/visual-design/layout/
 		layout.sectionInset = UIEdgeInsets(top: 60, left: 90, bottom: 60, right: 90)
 
@@ -89,6 +91,12 @@ class SeriesCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(SeriesCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+		self.view.addSubview(self.spinner)
+		self.spinner.startAnimating()
+		self.spinner.snp.makeConstraints { (make) in
+			make.center.equalToSuperview()
+		}
+
         // Do any additional setup after loading the view.
 		VideoProvider.shared.fetchSeries()
 		.then { series in
@@ -103,7 +111,7 @@ class SeriesCollectionViewController: UICollectionViewController {
 			debugPrint("Error fetching series: \(error.localizedDescription)")
 		}
 		.always {
-			//do some UI stuff
+			self.spinner.removeFromSuperview()
 		}
     }
 
