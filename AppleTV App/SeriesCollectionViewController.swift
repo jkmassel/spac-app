@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import SDWebImage
+import Dwifft
 
 private let reuseIdentifier = "Cell"
 private let cellLabelSize = CGSize(width: 470, height: 80)
@@ -55,13 +56,11 @@ class SeriesCollectionViewCell: UICollectionViewCell{
 				self.label.frame = CGRect(origin: CGPoint(x: 0, y: 220), size: cellLabelSize)
 			}, completion: nil)
 		}
-
 	}
 }
 
 class SeriesCollectionViewController: UICollectionViewController {
 
-	var series: [Series] = []
 	private let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
 
 	init() {
@@ -85,6 +84,8 @@ class SeriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		self.diffCalculator = CollectionViewDiffCalculator(collectionView: collectionView, initialSectionedValues: self.series)
+
 		// Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
 
@@ -101,6 +102,11 @@ class SeriesCollectionViewController: UICollectionViewController {
 		self.reloadSeries()
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(true)
+		self.reloadSeries()
+	}
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -108,16 +114,19 @@ class SeriesCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+		return self.diffCalculator?.numberOfSections() ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.series.count
-    }
+		return self.diffCalculator?.numberOfObjects(inSection: section) ?? 0
+	}
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SeriesCollectionViewCell
-		cell.series = self.series[indexPath.row]
+
+		if let series = self.diffCalculator?.value(atIndexPath: indexPath){
+			cell.series = series
+		}
 
         return cell
     }
@@ -126,12 +135,8 @@ class SeriesCollectionViewController: UICollectionViewController {
 
 		VideoProvider.shared.fetchSeries()
 			.then { series in
-				debugPrint("Fetched \(series.count) series")
-				self.series = series.filter{ $0.hasEpisodes }
-
-				DispatchQueue.main.async {
-					self.collectionView?.reloadData()
-				}
+//				debugPrint("Fetched \(series.count) series")
+				self.series = SectionedValues([("Series", series.filter{ $0.hasEpisodes })])
 			}
 			.catch { (error) in
 				let ac = UIAlertController(title: "Error Fetching Series", message: error.localizedDescription, preferredStyle: .alert)
@@ -143,9 +148,16 @@ class SeriesCollectionViewController: UICollectionViewController {
 			}
 	}
 
+	var series: SectionedValues<String, Series> = SectionedValues([("Series", [])]){
+		didSet { self.diffCalculator?.sectionedValues = self.series }
+	}
+
+	var diffCalculator: CollectionViewDiffCalculator<String, Series>?
+
     // MARK: UICollectionViewDelegate
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let series = self.series[indexPath.row]
+
+		guard let series = self.diffCalculator?.value(atIndexPath: indexPath) else { return }
 		let seriesViewController = SeriesViewController(withSeries: series)
 
 		//A special case for watching live

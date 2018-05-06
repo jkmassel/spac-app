@@ -102,6 +102,13 @@ extension Series{
 	}
 }
 
+extension Series: Equatable{
+	
+	static func == (lhs: Series, rhs: Series) -> Bool {
+		return lhs.id == rhs.id
+	}
+}
+
 struct Episode : Codable{
 
 	let id: String

@@ -9,6 +9,7 @@ target 'SPAC' do
   pod 'SnapKit', '~> 4.0'
   pod 'PromisesSwift', '~> 1.0'
   pod 'SDWebImage', '~> 4.0'
+  pod 'Dwifft'
 
 
 end

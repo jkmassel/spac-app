@@ -1,23 +1,34 @@
 PODS:
-  - PromisesObjC (1.0.7)
-  - PromisesSwift (1.0.7):
-    - PromisesObjC (= 1.0.7)
+  - Dwifft (0.8)
+  - PromisesObjC (1.1.1)
+  - PromisesSwift (1.1.1):
+    - PromisesObjC (= 1.1.1)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
+  - Dwifft
   - PromisesSwift (~> 1.0)
   - SDWebImage (~> 4.0)
   - SnapKit (~> 4.0)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Dwifft
+    - PromisesObjC
+    - PromisesSwift
+    - SDWebImage
+    - SnapKit
+
 SPEC CHECKSUMS:
-  PromisesObjC: e188094093ab3be6d2b975583e5c12022ad98c4f
-  PromisesSwift: 60f58ca196d891f290477a58e888eb97ac17ff49
+  Dwifft: 463e61d07322fdf83b32ee6975ca1b20708db746
+  PromisesObjC: c6ea89661f018e55cd83dd7d0b5a7751f5e63c23
+  PromisesSwift: 23ae4ad1c81963d35a37a98b83dd1e63403c54b8
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 43259cbe0f744de2d3918a2cae3e4ee06e58ea9e
+PODFILE CHECKSUM: a3f1af9cdcf7eeac1a940b9bd6c49038b253bf95
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
