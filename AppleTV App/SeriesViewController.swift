@@ -21,6 +21,7 @@ class SeriesViewController: UIViewController {
 	private let series: Series
 
 	private let seriesImageView = UIImageView(image: nil)
+	private let seriesTitle = UILabel()
 	private let seriesDescription = UILabel(frame: .zero)
 	private let tableView = UITableView(frame: .zero)
 
@@ -47,16 +48,26 @@ class SeriesViewController: UIViewController {
 			make.height.equalTo(420)
 		}
 
-		self.view.addSubview(self.seriesDescription)
-		self.seriesDescription.snp.makeConstraints { (make) in
+		self.seriesTitle.text = self.series.title
+		self.seriesTitle.numberOfLines = 0
+		self.seriesTitle.font = UIFont.preferredFont(forTextStyle: .headline)
+
+		self.view.addSubview(self.seriesTitle)
+		self.seriesTitle.snp.makeConstraints { (make) in
 			make.width.equalTo(940)
 			make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
 			make.top.equalTo(self.seriesImageView.snp.bottom).offset(32)
-			make.bottom.greaterThanOrEqualTo(self.view.safeAreaLayoutGuide.snp.bottom).priority(250)
 		}
 
 		self.seriesDescription.numberOfLines = 0
 		self.seriesDescription.font = UIFont.preferredFont(forTextStyle: .body)
+		self.view.addSubview(self.seriesDescription)
+		self.seriesDescription.snp.makeConstraints { (make) in
+			make.width.equalTo(940)
+			make.left.equalTo(self.view.safeAreaLayoutGuide.snp.left)
+			make.top.equalTo(self.seriesTitle.snp.bottom).offset(32)
+			make.bottom.greaterThanOrEqualTo(self.view.safeAreaLayoutGuide.snp.bottom).priority(250)
+		}
 
 		self.view.addSubview(self.tableView)
 		self.tableView.snp.makeConstraints { (make) in
