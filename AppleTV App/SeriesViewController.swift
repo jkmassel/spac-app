@@ -80,12 +80,12 @@ extension SeriesViewController : UITableViewDataSource{
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.series.episodes.count
+		return self.series.filteredEpisodes.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-		let message = self.series.episodes[indexPath.row]
+		let message = self.series.filteredEpisodes[indexPath.row]
 		let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
 
 		cell.textLabel?.text = message.title
@@ -101,7 +101,7 @@ extension SeriesViewController : UITableViewDelegate{
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-		let messageURL = self.series.episodes[indexPath.row].url
+		guard let messageURL = self.series.filteredEpisodes[indexPath.row].url else{ return }
 		
 		let playerViewController = PlayerViewController(withURL: messageURL)
 		self.present(playerViewController, animated: true, completion: nil)
