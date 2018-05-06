@@ -98,21 +98,7 @@ class SeriesCollectionViewController: UICollectionViewController {
 		}
 
         // Do any additional setup after loading the view.
-		VideoProvider.shared.fetchSeries()
-		.then { series in
-			debugPrint("Fetched \(series.count) series")
-			self.series = series.filter{ $0.hasEpisodes }
-
-			DispatchQueue.main.async {
-				self.collectionView?.reloadData()
-			}
-		}
-		.catch { (error) in
-			debugPrint("Error fetching series: \(error.localizedDescription)")
-		}
-		.always {
-			self.spinner.removeFromSuperview()
-		}
+		self.reloadSeries()
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,7 +111,6 @@ class SeriesCollectionViewController: UICollectionViewController {
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.series.count
     }
@@ -136,6 +121,27 @@ class SeriesCollectionViewController: UICollectionViewController {
 
         return cell
     }
+
+	func reloadSeries(){
+
+		VideoProvider.shared.fetchSeries()
+			.then { series in
+				debugPrint("Fetched \(series.count) series")
+				self.series = series.filter{ $0.hasEpisodes }
+
+				DispatchQueue.main.async {
+					self.collectionView?.reloadData()
+				}
+			}
+			.catch { (error) in
+				let ac = UIAlertController(title: "Error Fetching Series", message: error.localizedDescription, preferredStyle: .alert)
+				ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+				self.present(ac, animated: true, completion: nil)
+			}
+			.always {
+				self.spinner.removeFromSuperview()
+			}
+	}
 
     // MARK: UICollectionViewDelegate
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
