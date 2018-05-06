@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "tv",
-      "filename" : "Back Layer.png",
+      "filename" : "AppleTV Icon Back.png",
       "scale" : "1x"
     },
     {
       "idiom" : "tv",
+      "filename" : "AppleTV Icon Back@2x.png",
       "scale" : "2x"
     }
   ],
