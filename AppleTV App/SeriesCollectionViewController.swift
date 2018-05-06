@@ -21,7 +21,7 @@ class SeriesCollectionViewCell: UICollectionViewCell{
 	var series: Series?{
 		didSet{
 
-			self.imageView.sd_setImage(with: series?.previewImageURL, placeholderImage: #imageLiteral(resourceName: "MessageImageTest"))
+			self.imageView.sd_setImage(with: series?.previewImageURL, placeholderImage: nil)
 			self.imageView.adjustsImageWhenAncestorFocused = true
 
 			self.label.text = series?.title
