@@ -101,7 +101,7 @@ class SeriesCollectionViewController: UICollectionViewController {
 		VideoProvider.shared.fetchSeries()
 		.then { series in
 			debugPrint("Fetched \(series.count) series")
-			self.series = series
+			self.series = series.filter{ $0.hasEpisodes }
 
 			DispatchQueue.main.async {
 				self.collectionView?.reloadData()
