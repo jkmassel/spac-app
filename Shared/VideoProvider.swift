@@ -9,7 +9,8 @@
 import Foundation
 import Promises
 
-let url2 = URL(string: "https://player.vimeo.com/play/858287697?s=237823569_1522723716_950bc34ed4c43cd1a9c54adcd1f14742")!
+let liveSeriesID = UUID().uuidString
+let watchOnlineURL = URL(string: "https://y2e1jje-lh.akamaihd.net/i/WeekendServices_1@619990/master.m3u8")!
 
 struct VideoProvider{
 
@@ -33,8 +34,15 @@ struct VideoProvider{
 				guard let data = data else { return }
 
 				do{
-					let series = try decoder.decode([Series].self, from: data)
-					fulfill(series)
+					var series = try decoder.decode([Series].self, from: data)
+
+					let episode = Episode(id: liveSeriesID, title: "Watch Online", date: Date(), videoURL: watchOnlineURL.absoluteString)
+					let watchOnlineSeries = Series(id: liveSeriesID, title: "Watch Online", description: "", image: "https://spac-podcasts.backburnerdesign.com/media/watch%20online%20graphic.png", episode: episode)
+					series.insert(watchOnlineSeries, at: 0)
+
+					fulfill(series.sorted(by: { (one, two) -> Bool in
+						return one.latestEpisode?.date ?? Date() > two.latestEpisode?.date ?? Date()
+					}))
 				}
 				catch let err{
 					reject(err)
@@ -51,7 +59,16 @@ struct Series : Codable{
 	let description: String
 	let previewImage: String
 
-	let episodes: [Episode]
+	private let episodes: [Episode]
+
+	init(id: String, title: String, description: String, image: String, episode: Episode){
+		self.id = id
+		self.title = title
+		self.description = description
+		self.previewImage = image
+
+		self.episodes = [episode]
+	}
 
 	var previewImageURL: URL?{
 		return URL(string: self.previewImage)
@@ -68,26 +85,64 @@ struct Series : Codable{
 	}
 }
 
+extension Series{
+
+	var hasEpisodes: Bool{
+		return !self.filteredEpisodes.isEmpty
+	}
+
+	var filteredEpisodes: [Episode]{
+		return self.episodes.filter{ $0.url != nil }
+	}
+
+	var latestEpisode: Episode?{
+		return self.episodes.sorted(by: { (ep1, ep2) -> Bool in
+			return ep1.date < ep2.date
+		}).last
+	}
+}
+
 struct Episode : Codable{
+
 	let id: String
-	let title: String
+	let entryTitle: String
 	let duration: String
 	let date: Date
 
+	let videoTitle: String?
 	let videoURL: String?
 	let audioURL: String?
 
-	var url: URL{
-		return URL(string: "https://spac-podcasts.backburnerdesign.com/media/video/test.mp4")!
+	var url: URL?{
+		guard let videoURL = self.videoURL,
+			let url = URL(string: videoURL) else { return nil }
+
+		return url
+	}
+
+	var title: String{
+		return self.videoTitle ?? self.entryTitle
+	}
+
+	init(id: String, title: String, date: Date, videoURL: String){
+		self.id = id
+		self.entryTitle = title
+		self.date = date
+		self.duration = ""
+
+		self.videoTitle = title
+		self.videoURL = videoURL
+		self.audioURL = nil
 	}
 
 	enum CodingKeys: String, CodingKey
 	{
 		case id
-		case title
+		case entryTitle = "title"
 		case duration
 		case date
 
+		case videoTitle = "video-title"
 		case videoURL = "video-url"
 		case audioURL = "audio-url"
 	}
