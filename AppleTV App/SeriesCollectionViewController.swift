@@ -140,13 +140,13 @@ class SeriesCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let series = self.series[indexPath.row]
+		let seriesViewController = SeriesViewController(withSeries: series)
 
 		//A special case for watching live
 		if series.id == liveSeriesID, let url = series.latestEpisode?.url{
 			self.present(PlayerViewController(withURL: url), animated: true, completion: nil)
 		}
 		else{
-			let seriesViewController = SeriesViewController(withSeries: series)
 			self.present(seriesViewController, animated: true, completion: nil)
 		}
 	}
