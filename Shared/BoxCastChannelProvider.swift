@@ -3,8 +3,8 @@ import BoxCast
 import Promises
 import AVFoundation
 
-struct BoxCastVideoProvider: ChannelProvider {
-    
+struct BoxCastChannelProvider: ChannelProvider {
+        
     private let channels: [Channel]
 
     init(channels: [Channel]) {
@@ -15,7 +15,15 @@ struct BoxCastVideoProvider: ChannelProvider {
     var preloadedChannels: [Channel] {
         self.channels
     }
-    
+
+    func getLiveFeeds(in channel: Channel) -> Promise<[ChannelEpisode]> {
+        wrap {
+            BoxCastClient.sharedClient!.getLiveBroadcasts(channelId: channel.id, completionHandler: $0)
+        }
+        .then{ $0! }
+        .then(convertBroadcastsToEpisodes)
+    }
+
     func getChannnels() -> Promise<[Channel]> {
         Promise(self.channels)
     }

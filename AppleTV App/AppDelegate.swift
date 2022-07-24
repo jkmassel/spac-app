@@ -7,7 +7,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        DIContainer.shared = DIContainer(channelProvider: BoxCastVideoProvider(channels: [
+        DIContainer.shared = DIContainer(channelProvider: BoxCastChannelProvider(channels: [
+            Channel(id: "vdb9onjlhbghcb9cvfwp", title: "Watch Live", disabledByDefault: true),
             Channel(id: "vdb9onjlhbghcb9cvfwp", title: "Current Series"),
             Channel(id: "gyuikdmbutaiicfjptpe", title: "Full Services"),
             Channel(id: "kzhye5rc9qbd1piu0qxs", title: "Messages"),

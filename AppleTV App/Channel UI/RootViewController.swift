@@ -8,4 +8,12 @@ class RootViewController: UITabBarController {
         self.viewControllers = _viewControllers
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if self.tabBar.selectedItem?.isEnabled == false {
+            self.selectedIndex = 1
+        }
+
+        super.viewWillAppear(animated)
+    }
 }

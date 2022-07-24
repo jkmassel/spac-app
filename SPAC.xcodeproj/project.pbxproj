@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		242AD07920729EDD009F327C /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AD07820729EDD009F327C /* PlayerViewController.swift */; };
 		2447658A288DC80F00313BD0 /* VideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3CA1D207138C900A48657 /* VideoProvider.swift */; };
-		2447658C288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */; };
-		2447658D288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */; };
+		2447658C288DCA8600313BD0 /* BoxCastChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658B288DCA8600313BD0 /* BoxCastChannelProvider.swift */; };
+		2447658D288DCA8600313BD0 /* BoxCastChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658B288DCA8600313BD0 /* BoxCastChannelProvider.swift */; };
 		2447658F288DCC6C00313BD0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658E288DCC6C00313BD0 /* RootViewController.swift */; };
 		24476590288DCC6C00313BD0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658E288DCC6C00313BD0 /* RootViewController.swift */; };
 		24476592288DCD1900313BD0 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24476591288DCD1900313BD0 /* ChannelViewController.swift */; };
@@ -132,7 +132,7 @@
 
 /* Begin PBXFileReference section */
 		242AD07820729EDD009F327C /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCastVideoProvider.swift; sourceTree = "<group>"; };
+		2447658B288DCA8600313BD0 /* BoxCastChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCastChannelProvider.swift; sourceTree = "<group>"; };
 		2447658E288DCC6C00313BD0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		24476591288DCD1900313BD0 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		24476594288DD05100313BD0 /* ChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewCell.swift; sourceTree = "<group>"; };
@@ -305,9 +305,9 @@
 				244765A7288DDF7400313BD0 /* DIContainer.swift */,
 				2495A309207496EA00561330 /* Podfile */,
 				24E3CA1D207138C900A48657 /* VideoProvider.swift */,
-				2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */,
-				2447659B288DD20300313BD0 /* ChannelData.swift */,
 				244765A1288DDC1800313BD0 /* ChannelProvider.swift */,
+				2447659B288DD20300313BD0 /* ChannelData.swift */,
+				2447658B288DCA8600313BD0 /* BoxCastChannelProvider.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -563,7 +563,7 @@
 				24E3CA1E207138C900A48657 /* VideoProvider.swift in Sources */,
 				24476595288DD05100313BD0 /* ChannelViewCell.swift in Sources */,
 				2447659F288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */,
-				2447658C288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */,
+				2447658C288DCA8600313BD0 /* BoxCastChannelProvider.swift in Sources */,
 				2447659C288DD20300313BD0 /* ChannelData.swift in Sources */,
 				244765AB288DE5BB00313BD0 /* EpisodeCache.swift in Sources */,
 				244765A8288DDF7400313BD0 /* DIContainer.swift in Sources */,
@@ -582,7 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2447658A288DC80F00313BD0 /* VideoProvider.swift in Sources */,
-				2447658D288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */,
+				2447658D288DCA8600313BD0 /* BoxCastChannelProvider.swift in Sources */,
 				244765A3288DDC1800313BD0 /* ChannelProvider.swift in Sources */,
 				2447659D288DD20300313BD0 /* ChannelData.swift in Sources */,
 				244765A9288DDF7400313BD0 /* DIContainer.swift in Sources */,

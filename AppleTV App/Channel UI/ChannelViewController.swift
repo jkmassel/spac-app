@@ -11,8 +11,12 @@ class ChannelViewController: UINavigationController {
         super.init(rootViewController: ChannelCollectionViewController(channel: channel))
 
         self.tabBarItem = UITabBarItem(title: channel.title, image: nil, tag: 0)
+        
+        if channel.disabledByDefault {
+            self.tabBarItem.isEnabled = false
+        }
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -140,10 +144,11 @@ extension ChannelCollectionViewController {
         }
         .always {
             self.isLoadingEpisodes = false
+            self.tabBarItem.isEnabled = self.diffCalculator?.numberOfSections() ?? 0 > 0
             self.spinner.removeFromSuperview()
         }
     }
-
+    
     private func setEpisodes(_ episodes: [ChannelEpisode]) {
         self.episodes = SectionedValues([("Episodes", episodes)])
         try? episodeCache.setEpisodes(episodes, forChannel: channel)
