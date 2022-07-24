@@ -15,7 +15,7 @@ DEPENDENCIES:
   - SnapKit (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Dwifft
     - PromisesObjC
     - PromisesSwift
@@ -29,6 +29,6 @@ SPEC CHECKSUMS:
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: a3f1af9cdcf7eeac1a940b9bd6c49038b253bf95
+PODFILE CHECKSUM: 514c059a2c9556dec209427849d267ea25ce3e85
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.11.3

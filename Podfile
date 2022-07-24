@@ -11,7 +11,6 @@ target 'SPAC' do
   pod 'SDWebImage', '~> 4.0'
   pod 'Dwifft'
 
-
 end
 
 target 'spac-mobile' do
@@ -19,6 +18,7 @@ target 'spac-mobile' do
   use_frameworks!
 
   # Pods for spac-mobile
+  pod 'PromisesSwift', '~> 1.0'
 
   target 'spac-mobileTests' do
     inherit! :search_paths
