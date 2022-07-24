@@ -108,9 +108,9 @@ public class BoxCastPlayer : AVPlayer {
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(playerItemDidPlayToEndTime(_:)),
-                           name: .AVPlayerItemDidPlayToEndTime, object: nil)
+                           name: .AVPlayerItemDidPlayToEndTime, object: nil) 
         center.addObserver(self, selector: #selector(playerItemTimeJumped(_:)),
-                           name: .AVPlayerItemTimeJumped, object: nil)
+                           name: AVPlayerItem.timeJumpedNotification, object: nil)
     }
     
     private func removeObservers() {
