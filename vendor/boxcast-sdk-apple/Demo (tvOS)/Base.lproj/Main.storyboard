@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="16097" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQF-Ym-rX7">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Broadcasts-->
+        <scene sceneID="q8N-Xe-tfb">
+            <objects>
+                <tableViewController id="Ef0-Xy-UWT" customClass="ViewController" customModule="Demo__tvOS_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="GtZ-qa-lJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="iZC-qi-MT9">
+                                <rect key="frame" x="106" y="66" width="1708" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iZC-qi-MT9" id="Bb3-qe-Hv2">
+                                    <rect key="frame" x="0.0" y="0.0" width="1708" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ef0-Xy-UWT" id="78j-l8-iqv"/>
+                            <outlet property="delegate" destination="Ef0-Xy-UWT" id="wI8-gM-Krc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Broadcasts" id="pVJ-HF-Iit"/>
+                    <connections>
+                        <outlet property="tabBarObservedScrollView" destination="GtZ-qa-lJ1" id="JR4-Lg-4mp"/>
+                        <segue destination="vak-YK-GjR" kind="show" identifier="BroadcastSegue" id="Fx3-zN-G6S"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3R-bR-6am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="-69"/>
+        </scene>
+        <!--Broadcast View Controller-->
+        <scene sceneID="OAP-Rp-XHc">
+            <objects>
+                <viewController id="vak-YK-GjR" customClass="BroadcastViewController" customModule="Demo__tvOS_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPU-9X-nrh"/>
+                        <viewControllerLayoutGuide type="bottom" id="E1h-vA-w60"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WgT-S2-vqf">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WeA-h4-iEf">
+                                <rect key="frame" x="90" y="205" width="1740" height="416"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjo-G3-uQb">
+                                        <rect key="frame" x="0.0" y="0.0" width="1740" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-iE-bQu">
+                                        <rect key="frame" x="0.0" y="144" width="92" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLp-gy-4Rl">
+                                        <rect key="frame" x="0.0" y="206" width="92" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4t-gN-4z9">
+                                        <rect key="frame" x="0.0" y="268" width="92" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-Oi-06o">
+                                        <rect key="frame" x="0.0" y="330" width="330" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Play Broadcast"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="vak-YK-GjR" eventType="primaryActionTriggered" id="4rs-xL-Joq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cLP-GN-edc" firstAttribute="trailing" secondItem="WeA-h4-iEf" secondAttribute="trailing" id="LJD-TG-SbO"/>
+                            <constraint firstItem="WeA-h4-iEf" firstAttribute="leading" secondItem="cLP-GN-edc" secondAttribute="leading" id="qEK-m6-oVz"/>
+                            <constraint firstItem="WeA-h4-iEf" firstAttribute="top" secondItem="cLP-GN-edc" secondAttribute="top" id="tAY-od-yBY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cLP-GN-edc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yiY-br-3Z0"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="jLp-gy-4Rl" id="p2S-7t-ePj"/>
+                        <outlet property="descriptionLabel" destination="a4t-gN-4z9" id="N3f-DV-VRO"/>
+                        <outlet property="nameLabel" destination="JmV-iE-bQu" id="jyG-On-AyK"/>
+                        <outlet property="playButton" destination="Naz-Oi-06o" id="rV0-hO-Pku"/>
+                        <outlet property="thumbnailImageView" destination="fjo-G3-uQb" id="ipz-Io-VlG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nq6-tl-yWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4241" y="-69"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eoW-f8-tGY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQF-Ym-rX7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fLu-6D-Ebq">
+                        <rect key="frame" x="0.0" y="60" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ef0-Xy-UWT" kind="relationship" relationship="rootViewController" id="5bT-rw-3So"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZQ-vi-3fM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="-69"/>
+        </scene>
+    </scenes>
+</document>

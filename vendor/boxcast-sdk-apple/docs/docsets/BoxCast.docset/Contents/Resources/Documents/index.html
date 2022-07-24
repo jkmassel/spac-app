@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BoxCast  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="BoxCast  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">BoxCast 0.5.2 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/boxcast/boxcast-sdk-apple"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">BoxCast Reference</a>
+        <img id="carat" src="img/carat.png" />
+        BoxCast  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Client.html">Client</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BoxCastClient.html">BoxCastClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Models.html">Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Broadcast.html">Broadcast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BroadcastView.html">BroadcastView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BroadcastView.html#/s:7BoxCast13BroadcastViewV6StatusO">– Status</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Playback.html">Playback</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BoxCastPlayer.html">BoxCastPlayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Errors.html">Errors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BoxCastError.html">BoxCastError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='boxcast-sdk-for-apple-platforms' class='heading'>BoxCast SDK for Apple Platforms</h1>
+
+<p><img src="https://travis-ci.org/boxcast/boxcast-sdk-apple.svg?branch=master" alt="Travis Status Image"></p>
+
+<p>The official BoxCast SDK for integrating with the BoxCast API on Apple platforms.</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>List Live and Archived Broadcasts</li>
+<li>Detail A Broadcast</li>
+<li>Watch Broadcasts</li>
+<li>Documentation</li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 9.0+ | macOS 10.12+ | tvOS 9.0+</li>
+<li>Xcode 11.0+</li>
+<li>Swift 5.0+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>Cocoapods</h3>
+
+<p><a href="https://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>gem <span class="nb">install </span>cocoapods
+</code></pre>
+
+<p>To integrate BoxCast SDK into your Xcode project using CocoaPods, specify it in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'13.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'BoxCast'</span><span class="p">,</span> <span class="s1">'~&gt; 0.5'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<ol>
+<li><p>Install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>brew update
+<span class="nv">$ </span>brew <span class="nb">install </span>carthage
+</code></pre></li>
+<li><p>Edit your <code>Cartfile</code> to integrate BoxCast into your Xcode project:</p>
+<pre class="highlight plaintext"><code>github "boxcast/boxcast-sdk-apple" ~&gt; 0.5
+</code></pre></li>
+<li><p>Run <code>carthage update</code>. This will fetch BoxCast into a <code>Carthage/Checkouts</code> folder and build the framework.</p></li>
+<li><p>On your application targets’ “General” settings tab, in the “Linked Frameworks and Libraries” section, drag and drop <code>BoxCast.framework</code> from the <code>Carthage/Build</code> folder.</p></li>
+<li><p>On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: /bin/sh), add the following contents to the script area below the shell:</p>
+<pre class="highlight plaintext"><code>/usr/local/bin/carthage copy-frameworks
+</code></pre>
+
+<p>and add the paths to the frameworks you want to use under “Input Files”, e.g.:</p>
+<pre class="highlight plaintext"><code>$(SRCROOT)/Carthage/Build/iOS/BoxCast.framework
+</code></pre></li>
+</ol>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Before you get started make sure to grab the id of the channel you want to get broadcasts from. This can be found on your <a href="https://dashboard.boxcast.com/#/channels">BoxCast Dashboard</a>.</p>
+<h3 id='set-up' class='heading'>Set Up</h3>
+
+<p>In your AppDelegate you will want to make sure you call the <code>setUp</code> function on the <code><a href="Classes/BoxCastClient.html">BoxCastClient</a></code>. This will in turn create the <code>sharedClient</code> for you to use.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoxCast</span>
+
+<span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+
+    <span class="kt">BoxCastClient</span><span class="o">.</span><span class="nf">setUp</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='accessing-resources' class='heading'>Accessing Resources</h3>
+<h4 id='get-live-broadcasts' class='heading'>Get Live Broadcasts</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoxCast</span>
+
+<span class="kt">BoxCastClient</span><span class="o">.</span><span class="n">sharedClient</span><span class="p">?</span><span class="o">.</span><span class="nf">getLiveBroadcasts</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="s">"YOUR_CHANNEL_ID"</span><span class="p">)</span> <span class="p">{</span> <span class="n">broadcasts</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">broadcasts</span> <span class="o">=</span> <span class="n">broadcasts</span> <span class="p">{</span>
+        <span class="c1">// Do something special with the live broadcasts.</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Handle the error.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='get-archived-broadcasts' class='heading'>Get Archived Broadcasts</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoxCast</span>
+
+<span class="kt">BoxCastClient</span><span class="o">.</span><span class="n">sharedClient</span><span class="p">?</span><span class="o">.</span><span class="nf">getArchivedBroadcasts</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="s">"YOUR_CHANNEL_ID"</span><span class="p">)</span> <span class="p">{</span> <span class="n">broadcasts</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">broadcasts</span> <span class="o">=</span> <span class="n">broadcasts</span> <span class="p">{</span>
+        <span class="c1">// Do something special with the archived broadcasts.</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Handle the error.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='get-broadcast' class='heading'>Get Broadcast</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoxCast</span>
+
+<span class="kt">BoxCastClient</span><span class="o">.</span><span class="n">sharedClient</span><span class="p">?</span><span class="o">.</span><span class="nf">getBroadcast</span><span class="p">(</span><span class="nv">broadcastId</span><span class="p">:</span> <span class="s">"BROADCAST_ID"</span><span class="p">)</span> <span class="p">{</span> <span class="n">broadcast</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">broadcast</span> <span class="o">=</span> <span class="n">broadcast</span> <span class="p">{</span>
+        <span class="c1">// Do something special with the broadcast.</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Handle the error.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h4 id='get-broadcast-view' class='heading'>Get Broadcast View</h4>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoxCast</span>
+
+<span class="kt">BoxCastClient</span><span class="o">.</span><span class="n">sharedClient</span><span class="p">?</span><span class="o">.</span><span class="nf">getBroadcastView</span><span class="p">(</span><span class="nv">broadcastId</span><span class="p">:</span> <span class="s">"BROADCAST_ID"</span><span class="p">)</span> <span class="p">{</span> <span class="n">broadcastView</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">broadcastView</span> <span class="o">=</span> <span class="n">broadcastView</span> <span class="p">{</span>
+        <span class="c1">// Do something special with the broadcast view.</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// Handle error.</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='playback' class='heading'>Playback</h3>
+
+<p>After getting a detailed broadcast and broadcast view you can use the two resources to create an <code><a href="Classes/BoxCastPlayer.html">BoxCastPlayer</a></code> object. This object is a simple sublcass of <code>AVPlayer</code> and can be used in a similar fashion.</p>
+
+<p>Below is an example of creating the player and then presenting a <code>AVPlayerViewController</code> instance with the player.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoxCast</span>
+
+<span class="k">let</span> <span class="nv">player</span> <span class="o">=</span> <span class="kt">BoxCastPlayer</span><span class="p">(</span><span class="nv">broadcast</span><span class="p">:</span> <span class="n">broadcast</span><span class="p">,</span> <span class="nv">broadcastView</span><span class="p">:</span> <span class="n">broadcastView</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">controller</span> <span class="o">=</span> <span class="kt">AVPlayerViewController</span><span class="p">()</span>
+<span class="n">controller</span><span class="o">.</span><span class="n">player</span> <span class="o">=</span> <span class="n">player</span>
+<span class="nf">present</span><span class="p">(</span><span class="n">controller</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">player</span><span class="p">?</span><span class="o">.</span><span class="nf">play</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='demo' class='heading'>Demo</h2>
+
+<p>There is a demo app included with this project to help you get a feel for how this SDK can be used. Just open up the <code>BoxCast.xcodeproj</code> select the <code>Demo</code> scheme and run it.</p>
+
+<blockquote>
+<p>Carthage must be installed on your machine or the project won&rsquo;t build.</p>
+</blockquote>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Documentation can be found <a href="https://boxcast.github.io/boxcast-sdk-apple/">here</a>.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>BoxCast SDK is released under the MIT license. <a href="https://github.com/boxcast/boxcast-sdk-apple/blob/master/LICENSE">See LICENSE</a> for details.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2020 <a class="link" href="http://boxcast.com" target="_blank" rel="external">BoxCast, Inc.</a> under <a class="link" href="https://github.com/boxcast/boxcast-sdk-apple/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

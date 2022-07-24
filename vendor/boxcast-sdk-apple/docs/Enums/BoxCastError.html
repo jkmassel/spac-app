@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BoxCastError Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/BoxCastError" class="dashAnchor"></a>
+    <a title="BoxCastError Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BoxCast 0.5.2 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/boxcast/boxcast-sdk-apple"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BoxCast Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BoxCastError Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Client.html">Client</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BoxCastClient.html">BoxCastClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Models.html">Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Broadcast.html">Broadcast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BroadcastView.html">BroadcastView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BroadcastView.html#/s:7BoxCast13BroadcastViewV6StatusO">– Status</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Playback.html">Playback</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BoxCastPlayer.html">BoxCastPlayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Errors.html">Errors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BoxCastError.html">BoxCastError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BoxCastError</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BoxCastError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                </div>
+              </div>
+            <p>Errors that occured accessing BoxCast API resources.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO10badRequestyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/badRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO10badRequestyA2CmF">badRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request could not be understood due to malformed syntax.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO12unauthorizedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unauthorized" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO12unauthorizedyA2CmF">unauthorized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request requires user authentication.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unauthorized</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO12invalidTokenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO12invalidTokenyA2CmF">invalidToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The access token provided is expired, revoked, malformed or invalid for other reasons.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidToken</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO15paymentRequiredyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/paymentRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO15paymentRequiredyA2CmF">paymentRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Payment is required to complete the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">paymentRequired</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO9forbiddenyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/forbidden" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO9forbiddenyA2CmF">forbidden</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request is forbidden.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">forbidden</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO8notFoundyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/notFound" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO8notFoundyA2CmF">notFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The requested resource was not found.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notFound</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO8conflictyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/conflict" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO8conflictyA2CmF">conflict</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request could not be completed due to a conflict with the current state of the resource.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">conflict</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO4goneyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/gone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO4goneyA2CmF">gone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The requested resource is no longer available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gone</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO19unprocessableEntityyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unprocessableEntity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO19unprocessableEntityyA2CmF">unprocessableEntity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request could not be processed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unprocessableEntity</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO15tooManyRequestsyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/tooManyRequests" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO15tooManyRequestsyA2CmF">tooManyRequests</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The user has sent too many requests in a given amount of time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tooManyRequests</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO014internalServerC0yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/internalServerError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO014internalServerC0yA2CmF">internalServerError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server encountered an unexpected condition which prevented it from fulfilling the
+request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">internalServerError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO14notImplementedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/notImplemented" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO14notImplementedyA2CmF">notImplemented</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server does not support the functionality required to fulfill the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notImplemented</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO10badGatewayyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/badGateway" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO10badGatewayyA2CmF">badGateway</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server, while acting as a gateway or proxy, received an invalid response from the
+upstream server it accessed in attempting to fulfill the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badGateway</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO18serviceUnavailableyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/serviceUnavailable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO18serviceUnavailableyA2CmF">serviceUnavailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server is currently unable to handle the request due to a temporary overloading or
+maintenance of the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">serviceUnavailable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO14gatewayTimeoutyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/gatewayTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO14gatewayTimeoutyA2CmF">gatewayTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server, while acting as a gateway or proxy, did not receive a timely response from the
+upstream server specified by the URI (e.g. HTTP, FTP, LDAP) or some other auxiliary server
+(e.g. DNS) it needed to access in attempting to complete the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gatewayTimeout</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO14invalidRequestyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO14invalidRequestyA2CmF">invalidRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request is missing a required parameter, includes an unsupported parameter value, or is
+otherwise malformed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO13invalidClientyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidClient" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO13invalidClientyA2CmF">invalidClient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Client authentication failed (e.g., unknown client, no client authentication included, or
+unsupported authentication method).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidClient</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO12invalidGrantyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidGrant" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO12invalidGrantyA2CmF">invalidGrant</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The provided authorization grant is invalid, expired or revoked.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidGrant</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO18unauthorizedClientyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unauthorizedClient" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO18unauthorizedClientyA2CmF">unauthorizedClient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The authenticated client is not authorized to use this authorization grant type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unauthorizedClient</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO20unsupportedGrantTypeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unsupportedGrantType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO20unsupportedGrantTypeyA2CmF">unsupportedGrantType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The authorization grant type is not supported by the authorization server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedGrantType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO19objectSerializationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/objectSerialization" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO19objectSerializationyA2CmF">objectSerialization</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Object serialization error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">objectSerialization</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO013serializationC0yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/serializationError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO013serializationC0yA2CmF">serializationError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The resource was unable to be serialized.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">serializationError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO10invalidURLyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO10invalidURLyA2CmF">invalidURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL provided was invalid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidURL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB5ErrorO7unknownyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/unknown" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB5ErrorO7unknownyA2CmF">unknown</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unknown error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unknown</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2020 <a class="link" href="http://boxcast.com" target="_blank" rel="external">BoxCast, Inc.</a> under <a class="link" href="https://github.com/boxcast/boxcast-sdk-apple/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

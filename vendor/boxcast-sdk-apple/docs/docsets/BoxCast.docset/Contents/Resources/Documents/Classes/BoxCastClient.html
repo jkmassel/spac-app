@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BoxCastClient Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/BoxCastClient" class="dashAnchor"></a>
+    <a title="BoxCastClient Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">BoxCast 0.5.2 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/boxcast/boxcast-sdk-apple"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">BoxCast Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BoxCastClient Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Client.html">Client</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BoxCastClient.html">BoxCastClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Models.html">Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Broadcast.html">Broadcast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BroadcastView.html">BroadcastView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BroadcastView.html#/s:7BoxCast13BroadcastViewV6StatusO">– Status</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Playback.html">Playback</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BoxCastPlayer.html">BoxCastPlayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Errors.html">Errors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BoxCastError.html">BoxCastError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BoxCastClient</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BoxCastClient</span></code></pre>
+
+                </div>
+              </div>
+            <p>The client for the BoxCast API. Use the client to access resources of the BoxCast ecosystem.</p>
+
+<p>Make sure to call <code>BoxCastClient.setUp()</code> before using the <code>sharedClient</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Setup"></a>
+                <a name="//apple_ref/swift/Section/Setup" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Setup"></a>
+                  <h3 class="section-name"><p>Setup</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC5setUp5scope13configurationyAA0aB8Scopable_p_So25NSURLSessionConfigurationCtFZ"></a>
+                    <a name="//apple_ref/swift/Method/setUp(scope:configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC5setUp5scope13configurationyAA0aB8Scopable_p_So25NSURLSessionConfigurationCtFZ">setUp(scope:<wbr>configuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets up the shared client. This must be called in order to use <code><a href="../Classes/BoxCastClient.html#/s:7BoxCast0aB6ClientC06sharedC0ACSgvpZ">sharedClient</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setUp</span><span class="p">(</span><span class="nv">scope</span><span class="p">:</span> <span class="kt">BoxCastScopable</span> <span class="o">=</span> <span class="kt">PublicScope</span><span class="p">(),</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scope</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The scope for the client. Defaults to the public scope.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Shared%20Instance"></a>
+                <a name="//apple_ref/swift/Section/Shared Instance" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Shared%20Instance"></a>
+                  <h3 class="section-name"><p>Shared Instance</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC06sharedC0ACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/sharedClient" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC06sharedC0ACSgvpZ">sharedClient</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared singleton object to be used for accessing resources.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">sharedClient</span><span class="p">:</span> <span class="kt">BoxCastClient</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public"></a>
+                <a name="//apple_ref/swift/Section/Public" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Public"></a>
+                  <h3 class="section-name"><p>Public</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC12isAuthorizedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAuthorized" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC12isAuthorizedSbvp">isAuthorized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a boolean indicating if the client is authorized.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isAuthorized</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Accessing%20Broadcasts"></a>
+                <a name="//apple_ref/swift/Section/Accessing Broadcasts" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Accessing%20Broadcasts"></a>
+                  <h3 class="section-name"><p>Accessing Broadcasts</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC21getUpcomingBroadcasts9channelId17completionHandlerySS_ySayAA9BroadcastVGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getUpcomingBroadcasts(channelId:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC21getUpcomingBroadcasts9channelId17completionHandlerySS_ySayAA9BroadcastVGSg_s5Error_pSgtctF">getUpcomingBroadcasts(channelId:<wbr>completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of upcoming broadcasts for a specific channel.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getUpcomingBroadcasts</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">BroadcastList</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The handler to be called upon completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC17getLiveBroadcasts9channelId17completionHandlerySS_ySayAA9BroadcastVGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getLiveBroadcasts(channelId:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC17getLiveBroadcasts9channelId17completionHandlerySS_ySayAA9BroadcastVGSg_s5Error_pSgtctF">getLiveBroadcasts(channelId:<wbr>completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of live broadcasts for a specific channel.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getLiveBroadcasts</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">BroadcastList</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The handler to be called upon completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC21getArchivedBroadcasts9channelId17completionHandlerySS_ySayAA9BroadcastVGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getArchivedBroadcasts(channelId:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC21getArchivedBroadcasts9channelId17completionHandlerySS_ySayAA9BroadcastVGSg_s5Error_pSgtctF">getArchivedBroadcasts(channelId:<wbr>completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of archived broadcasts for a specific channel.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getArchivedBroadcasts</span><span class="p">(</span><span class="nv">channelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">BroadcastList</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The handler to be called upon completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC12getBroadcast11broadcastId07channelG017completionHandlerySS_SSyAA0E0VSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getBroadcast(broadcastId:channelId:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC12getBroadcast11broadcastId07channelG017completionHandlerySS_SSyAA0E0VSg_s5Error_pSgtctF">getBroadcast(broadcastId:<wbr>channelId:<wbr>completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a detailed broadcast.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getBroadcast</span><span class="p">(</span><span class="nv">broadcastId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">channelId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Structs/Broadcast.html">Broadcast</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>broadcastId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The broadcast id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channelId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The channel id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The handler to be called upon completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Accessing%20Broadcast%20Views"></a>
+                <a name="//apple_ref/swift/Section/Accessing Broadcast Views" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Accessing%20Broadcast%20Views"></a>
+                  <h3 class="section-name"><p>Accessing Broadcast Views</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7BoxCast0aB6ClientC16getBroadcastView11broadcastId17completionHandlerySS_yAA0eF0VSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getBroadcastView(broadcastId:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7BoxCast0aB6ClientC16getBroadcastView11broadcastId17completionHandlerySS_yAA0eF0VSg_s5Error_pSgtctF">getBroadcastView(broadcastId:<wbr>completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a view for a specific broadcast.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getBroadcastView</span><span class="p">(</span><span class="nv">broadcastId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt"><a href="../Structs/BroadcastView.html">BroadcastView</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>broadcastId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The broadcast id.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The handler to be called upon completion.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2020 <a class="link" href="http://boxcast.com" target="_blank" rel="external">BoxCast, Inc.</a> under <a class="link" href="https://github.com/boxcast/boxcast-sdk-apple/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
