@@ -28,7 +28,7 @@ class ChannelCollectionViewController: UICollectionViewController {
         didSet { self.diffCalculator?.sectionedValues = self.episodes }
     }
 
-    private let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    private let spinner = UIActivityIndicatorView(style: .whiteLarge)
     var isLoadingEpisodes: Bool = false
 
     let channelProvider = DIContainer.shared.channelProvider

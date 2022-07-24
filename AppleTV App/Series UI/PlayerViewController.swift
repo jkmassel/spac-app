@@ -1,11 +1,3 @@
-//
-//  PlayerViewController.swift
-//  SPAC
-//
-//  Created by Jeremy Massel on 2018-04-02.
-//  Copyright © 2018 The Paperless Classroom Corp. All rights reserved.
-//
-
 import UIKit
 import AVKit
 

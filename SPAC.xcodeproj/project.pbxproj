@@ -196,14 +196,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2447659A288DD1A600313BD0 /* Channel */ = {
+		2447659A288DD1A600313BD0 /* Channel UI */ = {
 			isa = PBXGroup;
 			children = (
+				2447658E288DCC6C00313BD0 /* RootViewController.swift */,
 				24476591288DCD1900313BD0 /* ChannelViewController.swift */,
 				24476594288DD05100313BD0 /* ChannelViewCell.swift */,
 				2447659E288DD58A00313BD0 /* ChannelViewPlayer.swift */,
 			);
-			path = Channel;
+			path = "Channel UI";
 			sourceTree = "<group>";
 		};
 		244765AD288DE5C700313BD0 /* Caching */ = {
@@ -255,16 +256,23 @@
 		244FC3971F8157A800E19599 /* AppleTV App */ = {
 			isa = PBXGroup;
 			children = (
-				2447659A288DD1A600313BD0 /* Channel */,
+				245D7348288DF9750025FC81 /* Series UI */,
+				2447659A288DD1A600313BD0 /* Channel UI */,
 				244FC3981F8157A800E19599 /* AppDelegate.swift */,
-				2447658E288DCC6C00313BD0 /* RootViewController.swift */,
 				244FC39F1F8157A800E19599 /* Assets.xcassets */,
-				24E3CA1F2071397E00A48657 /* SeriesViewController.swift */,
-				2495A302207335BA00561330 /* SeriesCollectionViewController.swift */,
-				242AD07820729EDD009F327C /* PlayerViewController.swift */,
 				244FC3A11F8157A800E19599 /* Info.plist */,
 			);
 			path = "AppleTV App";
+			sourceTree = "<group>";
+		};
+		245D7348288DF9750025FC81 /* Series UI */ = {
+			isa = PBXGroup;
+			children = (
+				2495A302207335BA00561330 /* SeriesCollectionViewController.swift */,
+				24E3CA1F2071397E00A48657 /* SeriesViewController.swift */,
+				242AD07820729EDD009F327C /* PlayerViewController.swift */,
+			);
+			path = "Series UI";
 			sourceTree = "<group>";
 		};
 		24E3C9FB2071337700A48657 /* spac-mobile */ = {

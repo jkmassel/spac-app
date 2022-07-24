@@ -1,11 +1,3 @@
-//
-//  SeriesCollectionViewController.swift
-//  SPAC
-//
-//  Created by Jeremy Massel on 2018-04-02.
-//  Copyright © 2018 The Paperless Classroom Corp. All rights reserved.
-//
-
 import UIKit
 import SnapKit
 import SDWebImage
@@ -61,7 +53,7 @@ class SeriesCollectionViewCell: UICollectionViewCell{
 
 class SeriesCollectionViewController: UICollectionViewController {
 
-	private let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    private let spinner = UIActivityIndicatorView(style: .whiteLarge)
 
 	init() {
 		let layout = UICollectionViewFlowLayout()
