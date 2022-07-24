@@ -9,6 +9,28 @@
 /* Begin PBXBuildFile section */
 		15433515F743DA30C8766433 /* Pods_SPAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29154991883C9BA04E63A123 /* Pods_SPAC.framework */; };
 		242AD07920729EDD009F327C /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242AD07820729EDD009F327C /* PlayerViewController.swift */; };
+		2447658A288DC80F00313BD0 /* VideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3CA1D207138C900A48657 /* VideoProvider.swift */; };
+		2447658C288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */; };
+		2447658D288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */; };
+		2447658F288DCC6C00313BD0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658E288DCC6C00313BD0 /* RootViewController.swift */; };
+		24476590288DCC6C00313BD0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658E288DCC6C00313BD0 /* RootViewController.swift */; };
+		24476592288DCD1900313BD0 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24476591288DCD1900313BD0 /* ChannelViewController.swift */; };
+		24476593288DCD1900313BD0 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24476591288DCD1900313BD0 /* ChannelViewController.swift */; };
+		24476595288DD05100313BD0 /* ChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24476594288DD05100313BD0 /* ChannelViewCell.swift */; };
+		24476596288DD05100313BD0 /* ChannelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24476594288DD05100313BD0 /* ChannelViewCell.swift */; };
+		2447659C288DD20300313BD0 /* ChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447659B288DD20300313BD0 /* ChannelData.swift */; };
+		2447659D288DD20300313BD0 /* ChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447659B288DD20300313BD0 /* ChannelData.swift */; };
+		2447659F288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447659E288DD58A00313BD0 /* ChannelViewPlayer.swift */; };
+		244765A0288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447659E288DD58A00313BD0 /* ChannelViewPlayer.swift */; };
+		244765A2288DDC1800313BD0 /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765A1288DDC1800313BD0 /* ChannelProvider.swift */; };
+		244765A3288DDC1800313BD0 /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765A1288DDC1800313BD0 /* ChannelProvider.swift */; };
+		244765A8288DDF7400313BD0 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765A7288DDF7400313BD0 /* DIContainer.swift */; };
+		244765A9288DDF7400313BD0 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765A7288DDF7400313BD0 /* DIContainer.swift */; };
+		244765AB288DE5BB00313BD0 /* EpisodeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765AA288DE5BB00313BD0 /* EpisodeCache.swift */; };
+		244765AC288DE5BB00313BD0 /* EpisodeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765AA288DE5BB00313BD0 /* EpisodeCache.swift */; };
+		244765AF288DE5D300313BD0 /* CacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765AE288DE5D300313BD0 /* CacheProvider.swift */; };
+		244765B0288DE5D300313BD0 /* CacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244765AE288DE5D300313BD0 /* CacheProvider.swift */; };
+		244765DE288DF27500313BD0 /* BoxCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244765D5288DF25900313BD0 /* BoxCast.framework */; };
 		244FC3991F8157A800E19599 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FC3981F8157A800E19599 /* AppDelegate.swift */; };
 		244FC3A01F8157A800E19599 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244FC39F1F8157A800E19599 /* Assets.xcassets */; };
 		2495A303207335BA00561330 /* SeriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495A302207335BA00561330 /* SeriesCollectionViewController.swift */; };
@@ -26,6 +48,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		244765CC288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41FB6CFC1EC76C8500C9EC8C;
+			remoteInfo = "BoxCast iOS";
+		};
+		244765CE288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41FB6D051EC76C8500C9EC8C;
+			remoteInfo = "BoxCast iOS Tests";
+		};
+		244765D0288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41C5C8F91ECC7EF500EFD295;
+			remoteInfo = "BoxCast macOS";
+		};
+		244765D2288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41C5C9121ECC7F8C00EFD295;
+			remoteInfo = "BoxCast macOS Tests";
+		};
+		244765D4288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4156C6D2248932CE009D7D96;
+			remoteInfo = "BoxCast tvOS";
+		};
+		244765D6288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4156C6EE2489335F009D7D96;
+			remoteInfo = "BoxCast tvOS Tests";
+		};
+		244765D8288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41FB6D3B1EC78D9100C9EC8C;
+			remoteInfo = "Demo (iOS)";
+		};
+		244765DA288DF25900313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 41895383248C243B0017D2A1;
+			remoteInfo = "Demo (tvOS)";
+		};
+		244765DC288DF26400313BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4156C6D1248932CE009D7D96;
+			remoteInfo = "BoxCast tvOS";
+		};
 		24E3CA102071337900A48657 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 244FC38D1F8157A800E19599 /* Project object */;
@@ -35,21 +120,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		242AD07B20732093009F327C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		07A8D31F80A6E1565CF24A9A /* Pods-SPAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SPAC/Pods-SPAC.debug.xcconfig"; sourceTree = "<group>"; };
 		242AD07820729EDD009F327C /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		243BB088288DBCB800708730 /* static-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "static-data.json"; sourceTree = "<group>"; };
+		2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCastVideoProvider.swift; sourceTree = "<group>"; };
+		2447658E288DCC6C00313BD0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		24476591288DCD1900313BD0 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		24476594288DD05100313BD0 /* ChannelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewCell.swift; sourceTree = "<group>"; };
+		2447659B288DD20300313BD0 /* ChannelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelData.swift; sourceTree = "<group>"; };
+		2447659E288DD58A00313BD0 /* ChannelViewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewPlayer.swift; sourceTree = "<group>"; };
+		244765A1288DDC1800313BD0 /* ChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelProvider.swift; sourceTree = "<group>"; };
+		244765A7288DDF7400313BD0 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		244765AA288DE5BB00313BD0 /* EpisodeCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCache.swift; sourceTree = "<group>"; };
+		244765AE288DE5D300313BD0 /* CacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProvider.swift; sourceTree = "<group>"; };
+		244765C1288DF25900313BD0 /* BoxCast.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BoxCast.xcodeproj; path = "vendor/boxcast-sdk-apple/BoxCast.xcodeproj"; sourceTree = "<group>"; };
 		244FC3951F8157A800E19599 /* SPAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		244FC3981F8157A800E19599 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		244FC39F1F8157A800E19599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244765DE288DF27500313BD0 /* BoxCast.framework in Frameworks */,
 				15433515F743DA30C8766433 /* Pods_SPAC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +206,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2447659A288DD1A600313BD0 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				24476591288DCD1900313BD0 /* ChannelViewController.swift */,
+				24476594288DD05100313BD0 /* ChannelViewCell.swift */,
+				2447659E288DD58A00313BD0 /* ChannelViewPlayer.swift */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
+		244765AD288DE5C700313BD0 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				244765AA288DE5BB00313BD0 /* EpisodeCache.swift */,
+				244765AE288DE5D300313BD0 /* CacheProvider.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
+		244765C2288DF25900313BD0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				244765CD288DF25900313BD0 /* BoxCast.framework */,
+				244765CF288DF25900313BD0 /* BoxCast iOS Tests.xctest */,
+				244765D1288DF25900313BD0 /* BoxCast.framework */,
+				244765D3288DF25900313BD0 /* BoxCast macOS Tests.xctest */,
+				244765D5288DF25900313BD0 /* BoxCast.framework */,
+				244765D7288DF25900313BD0 /* BoxCast tvOS Tests.xctest */,
+				244765D9288DF25900313BD0 /* Demo (iOS).app */,
+				244765DB288DF25900313BD0 /* Demo (tvOS).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		244FC38C1F8157A800E19599 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +266,9 @@
 		244FC3971F8157A800E19599 /* AppleTV App */ = {
 			isa = PBXGroup;
 			children = (
+				2447659A288DD1A600313BD0 /* Channel */,
 				244FC3981F8157A800E19599 /* AppDelegate.swift */,
+				2447658E288DCC6C00313BD0 /* RootViewController.swift */,
 				244FC39F1F8157A800E19599 /* Assets.xcassets */,
 				24E3CA1F2071397E00A48657 /* SeriesViewController.swift */,
 				2495A302207335BA00561330 /* SeriesCollectionViewController.swift */,
@@ -182,8 +304,14 @@
 		24E3CA1C207138B100A48657 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				244765AD288DE5C700313BD0 /* Caching */,
+				244765A7288DDF7400313BD0 /* DIContainer.swift */,
 				2495A309207496EA00561330 /* Podfile */,
+				243BB088288DBCB800708730 /* static-data.json */,
 				24E3CA1D207138C900A48657 /* VideoProvider.swift */,
+				2447658B288DCA8600313BD0 /* BoxCastVideoProvider.swift */,
+				2447659B288DD20300313BD0 /* ChannelData.swift */,
+				244765A1288DDC1800313BD0 /* ChannelProvider.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -191,6 +319,7 @@
 		24E3CA2C2071503C00A48657 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				244765C1288DF25900313BD0 /* BoxCast.xcodeproj */,
 				29154991883C9BA04E63A123 /* Pods_SPAC.framework */,
 				AF53DD1A7C409E6757B4C007 /* Pods_spac_mobile.framework */,
 				E02D88908E1909788D388AED /* Pods_spac_mobileTests.framework */,
@@ -209,13 +338,13 @@
 				244FC3911F8157A800E19599 /* Sources */,
 				244FC3921F8157A800E19599 /* Frameworks */,
 				244FC3931F8157A800E19599 /* Resources */,
-				242AD07B20732093009F327C /* CopyFiles */,
 				24AE4CAD209F6CF100C7C747 /* Set Build Number */,
 				D885BF0D31622922B7715D4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				244765DD288DF26400313BD0 /* PBXTargetDependency */,
 			);
 			name = SPAC;
 			productName = SPAC;
@@ -230,6 +359,7 @@
 				24E3C9F62071337700A48657 /* Sources */,
 				24E3C9F72071337700A48657 /* Frameworks */,
 				24E3C9F82071337700A48657 /* Resources */,
+				6D6478F95EA1C3DBA9F871CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +425,12 @@
 			mainGroup = 244FC38C1F8157A800E19599;
 			productRefGroup = 244FC3961F8157A800E19599 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 244765C2288DF25900313BD0 /* Products */;
+					ProjectRef = 244765C1288DF25900313BD0 /* BoxCast.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				244FC3941F8157A800E19599 /* SPAC */,
@@ -303,6 +439,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		244765CD288DF25900313BD0 /* BoxCast.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BoxCast.framework;
+			remoteRef = 244765CC288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765CF288DF25900313BD0 /* BoxCast iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BoxCast iOS Tests.xctest";
+			remoteRef = 244765CE288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765D1288DF25900313BD0 /* BoxCast.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BoxCast.framework;
+			remoteRef = 244765D0288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765D3288DF25900313BD0 /* BoxCast macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BoxCast macOS Tests.xctest";
+			remoteRef = 244765D2288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765D5288DF25900313BD0 /* BoxCast.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BoxCast.framework;
+			remoteRef = 244765D4288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765D7288DF25900313BD0 /* BoxCast tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BoxCast tvOS Tests.xctest";
+			remoteRef = 244765D6288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765D9288DF25900313BD0 /* Demo (iOS).app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Demo (iOS).app";
+			remoteRef = 244765D8288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		244765DB288DF25900313BD0 /* Demo (tvOS).app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Demo (tvOS).app";
+			remoteRef = 244765DA288DF25900313BD0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		244FC3931F8157A800E19599 /* Resources */ = {
@@ -347,6 +542,26 @@
 			shellPath = /bin/sh;
 			shellScript = "#\n# Set the build number to the current git commit count.\n# If we're using the Dev scheme, then we'll suffix the build\n# number with the current branch name, to make collisions\n# far less likely across feature branches.\n# Based on: http://w3facility.info/question/how-do-i-force-xcode-to-rebuild-the-info-plist-file-in-my-project-every-time-i-build-the-project/\n#\n# Updated with dSYM handling from http://yellowfeather.co.uk/blog/auto-incrementing-build-number-in-xcode-revisited/\n#\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
+		6D6478F95EA1C3DBA9F871CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-spac-mobile/Pods-spac-mobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC-iOS/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift-iOS/Promises.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-spac-mobile/Pods-spac-mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		925DF14E32B3A7A8E956B636 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,10 +604,10 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SPAC/Pods-SPAC-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SPAC/Pods-SPAC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Dwifft/Dwifft.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC-tvOS/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift-tvOS/Promises.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -406,7 +621,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SPAC/Pods-SPAC-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SPAC/Pods-SPAC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0F19D20BA043A59F7E685CF /* [CP] Check Pods Manifest.lock */ = {
@@ -434,10 +649,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244765A2288DDC1800313BD0 /* ChannelProvider.swift in Sources */,
 				24E3CA1E207138C900A48657 /* VideoProvider.swift in Sources */,
+				24476595288DD05100313BD0 /* ChannelViewCell.swift in Sources */,
+				2447659F288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */,
+				2447658C288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */,
+				2447659C288DD20300313BD0 /* ChannelData.swift in Sources */,
+				244765AB288DE5BB00313BD0 /* EpisodeCache.swift in Sources */,
+				244765A8288DDF7400313BD0 /* DIContainer.swift in Sources */,
 				242AD07920729EDD009F327C /* PlayerViewController.swift in Sources */,
+				2447658F288DCC6C00313BD0 /* RootViewController.swift in Sources */,
 				244FC3991F8157A800E19599 /* AppDelegate.swift in Sources */,
 				24E3CA202071397E00A48657 /* SeriesViewController.swift in Sources */,
+				24476592288DCD1900313BD0 /* ChannelViewController.swift in Sources */,
+				244765AF288DE5D300313BD0 /* CacheProvider.swift in Sources */,
 				2495A303207335BA00561330 /* SeriesCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,8 +671,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2447658A288DC80F00313BD0 /* VideoProvider.swift in Sources */,
+				2447658D288DCA8600313BD0 /* BoxCastVideoProvider.swift in Sources */,
+				244765A3288DDC1800313BD0 /* ChannelProvider.swift in Sources */,
+				2447659D288DD20300313BD0 /* ChannelData.swift in Sources */,
+				244765A9288DDF7400313BD0 /* DIContainer.swift in Sources */,
+				24476590288DCC6C00313BD0 /* RootViewController.swift in Sources */,
 				24E3CA012071337700A48657 /* SecondViewController.swift in Sources */,
+				244765B0288DE5D300313BD0 /* CacheProvider.swift in Sources */,
+				24476596288DD05100313BD0 /* ChannelViewCell.swift in Sources */,
 				24E3C9FD2071337700A48657 /* AppDelegate.swift in Sources */,
+				244765A0288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */,
+				244765AC288DE5BB00313BD0 /* EpisodeCache.swift in Sources */,
+				24476593288DCD1900313BD0 /* ChannelViewController.swift in Sources */,
 				24E3C9FF2071337700A48657 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +699,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		244765DD288DF26400313BD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BoxCast tvOS";
+			targetProxy = 244765DC288DF26400313BD0 /* PBXContainerItemProxy */;
+		};
 		24E3CA112071337900A48657 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24E3C9F92071337700A48657 /* spac-mobile */;
@@ -613,6 +854,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -630,6 +872,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};

@@ -76,7 +76,7 @@ public struct Broadcast {
 
 public typealias BroadcastList = [Broadcast]
 
-extension Array where Element == Broadcast {
+public extension Array where Element == Broadcast {
     init(channelId: String, json: Any) throws {
         guard let array = json as? Array<Any> else {
             throw BoxCastError.serializationError

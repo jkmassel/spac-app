@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SPAC
-//
-//  Created by Jeremy Massel on 2017-10-01.
-//  Copyright © 2017 The Paperless Classroom Corp. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -13,10 +5,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-		self.window = UIWindow(frame: UIScreen.main.bounds)
-		self.window?.rootViewController = UINavigationController(rootViewController: SeriesCollectionViewController())
+        DIContainer.shared = DIContainer(channelProvider: BoxCastVideoProvider(channels: [
+            Channel(id: "vdb9onjlhbghcb9cvfwp", title: "Current Series"),
+            Channel(id: "gyuikdmbutaiicfjptpe", title: "Full Services"),
+            Channel(id: "kzhye5rc9qbd1piu0qxs", title: "Messages"),
+        ]))
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+		self.window?.rootViewController = RootViewController()
 		self.window?.makeKeyAndVisible()
 
 		return true
@@ -43,7 +41,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(_ application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
-
 }
-
