@@ -2,6 +2,7 @@ import Foundation
 import BoxCast
 import Promises
 import AVFoundation
+import UIKit
 
 struct BoxCastChannelProvider: ChannelProvider {
         
@@ -16,12 +17,20 @@ struct BoxCastChannelProvider: ChannelProvider {
         self.channels
     }
 
+    var channelViewControllers: [UIViewController] {
+        self.channels.map(convertChannelToViewController)
+    }
+
     func getLiveFeeds(in channel: Channel) -> Promise<[ChannelEpisode]> {
         wrap {
             BoxCastClient.sharedClient!.getLiveBroadcasts(channelId: channel.id, completionHandler: $0)
         }
         .then{ $0! }
         .then(convertBroadcastsToEpisodes)
+    }
+
+    func getFeedIsLive(for channel: Channel) -> Promise<Bool> {
+        getLiveFeeds(in: channel).then { !$0.isEmpty }
     }
 
     func getChannnels() -> Promise<[Channel]> {
@@ -32,7 +41,7 @@ struct BoxCastChannelProvider: ChannelProvider {
         getBroadcasts(forChannel: channel)
             .then(convertBroadcastsToEpisodes)
     }
-
+    
     func getPlayer(forEpisode episode: ChannelEpisode) -> Promise<AVPlayer> {
         let client = BoxCastClient.sharedClient!
         return Promise { fulfill, reject in
@@ -121,4 +130,13 @@ extension Broadcast: Equatable {
     public static func == (lhs: Broadcast, rhs: Broadcast) -> Bool {
         return lhs.id == rhs.id
     }
+}
+
+fileprivate func convertChannelToViewController(_ channel: Channel) -> UIViewController {
+
+    if channel.isLiveChannel {
+        return LiveChannelViewController(withChannel: channel)
+    }
+
+    return ChannelViewController(channel: channel)
 }

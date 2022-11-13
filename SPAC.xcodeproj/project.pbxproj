@@ -39,6 +39,11 @@
 		24C4D781288DF683005465C1 /* BoxCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244765CD288DF25900313BD0 /* BoxCast.framework */; };
 		24C4D785288DF6FE005465C1 /* Dwifft in Frameworks */ = {isa = PBXBuildFile; productRef = 24C4D784288DF6FE005465C1 /* Dwifft */; };
 		24C4D793288DF75C005465C1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24C4D792288DF75C005465C1 /* SDWebImage */; };
+		24DBD3FE28D77F970016A0AA /* BoxCast.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 244765D5288DF25900313BD0 /* BoxCast.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24DBD40028D7857B0016A0AA /* LiveChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DBD3FF28D7857B0016A0AA /* LiveChannelViewController.swift */; };
+		24DBD40128D7857B0016A0AA /* LiveChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DBD3FF28D7857B0016A0AA /* LiveChannelViewController.swift */; };
+		24DBD40328D78BF10016A0AA /* TabBarControllerDisableable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DBD40228D78BF10016A0AA /* TabBarControllerDisableable.swift */; };
+		24DBD40428D78BF10016A0AA /* TabBarControllerDisableable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DBD40228D78BF10016A0AA /* TabBarControllerDisableable.swift */; };
 		24E3C9FD2071337700A48657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3C9FC2071337700A48657 /* AppDelegate.swift */; };
 		24E3C9FF2071337700A48657 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3C9FE2071337700A48657 /* FirstViewController.swift */; };
 		24E3CA012071337700A48657 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E3CA002071337700A48657 /* SecondViewController.swift */; };
@@ -130,6 +135,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		24DBD3FB28D77F8A0016A0AA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				24DBD3FE28D77F970016A0AA /* BoxCast.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		242AD07820729EDD009F327C /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		2447658B288DCA8600313BD0 /* BoxCastChannelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCastChannelProvider.swift; sourceTree = "<group>"; };
@@ -148,7 +166,8 @@
 		244FC39F1F8157A800E19599 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244FC3A11F8157A800E19599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2495A302207335BA00561330 /* SeriesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewController.swift; sourceTree = "<group>"; };
-		2495A309207496EA00561330 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24DBD3FF28D7857B0016A0AA /* LiveChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelViewController.swift; sourceTree = "<group>"; };
+		24DBD40228D78BF10016A0AA /* TabBarControllerDisableable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerDisableable.swift; sourceTree = "<group>"; };
 		24E3C9FA2071337700A48657 /* spac-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spac-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E3C9FC2071337700A48657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E3C9FE2071337700A48657 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +222,8 @@
 				24476591288DCD1900313BD0 /* ChannelViewController.swift */,
 				24476594288DD05100313BD0 /* ChannelViewCell.swift */,
 				2447659E288DD58A00313BD0 /* ChannelViewPlayer.swift */,
+				24DBD3FF28D7857B0016A0AA /* LiveChannelViewController.swift */,
+				24DBD40228D78BF10016A0AA /* TabBarControllerDisableable.swift */,
 			);
 			path = "Channel UI";
 			sourceTree = "<group>";
@@ -303,7 +324,6 @@
 			children = (
 				244765AD288DE5C700313BD0 /* Caching */,
 				244765A7288DDF7400313BD0 /* DIContainer.swift */,
-				2495A309207496EA00561330 /* Podfile */,
 				24E3CA1D207138C900A48657 /* VideoProvider.swift */,
 				244765A1288DDC1800313BD0 /* ChannelProvider.swift */,
 				2447659B288DD20300313BD0 /* ChannelData.swift */,
@@ -330,6 +350,7 @@
 				244FC3911F8157A800E19599 /* Sources */,
 				244FC3921F8157A800E19599 /* Frameworks */,
 				244FC3931F8157A800E19599 /* Resources */,
+				24DBD3FB28D77F8A0016A0AA /* CopyFiles */,
 				24AE4CAD209F6CF100C7C747 /* Set Build Number */,
 			);
 			buildRules = (
@@ -405,7 +426,6 @@
 					244FC3941F8157A800E19599 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 1340;
-						ProvisioningStyle = Automatic;
 					};
 					24E3C9F92071337700A48657 = {
 						CreatedOnToolsVersion = 9.3;
@@ -550,7 +570,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\n# Set the build number to the current git commit count.\n# If we're using the Dev scheme, then we'll suffix the build\n# number with the current branch name, to make collisions\n# far less likely across feature branches.\n# Based on: http://w3facility.info/question/how-do-i-force-xcode-to-rebuild-the-info-plist-file-in-my-project-every-time-i-build-the-project/\n#\n# Updated with dSYM handling from http://yellowfeather.co.uk/blog/auto-incrementing-build-number-in-xcode-revisited/\n#\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+			shellScript = "#\n# Set the build number to the current git commit count.\n# If we're using the Dev scheme, then we'll suffix the build\n# number with the current branch name, to make collisions\n# far less likely across feature branches.\n# Based on: http://w3facility.info/question/how-do-i-force-xcode-to-rebuild-the-info-plist-file-in-my-project-every-time-i-build-the-project/\n#\n# Updated with dSYM handling from http://yellowfeather.co.uk/blog/auto-incrementing-build-number-in-xcode-revisited/\n#\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -561,6 +581,7 @@
 			files = (
 				244765A2288DDC1800313BD0 /* ChannelProvider.swift in Sources */,
 				24E3CA1E207138C900A48657 /* VideoProvider.swift in Sources */,
+				24DBD40028D7857B0016A0AA /* LiveChannelViewController.swift in Sources */,
 				24476595288DD05100313BD0 /* ChannelViewCell.swift in Sources */,
 				2447659F288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */,
 				2447658C288DCA8600313BD0 /* BoxCastChannelProvider.swift in Sources */,
@@ -573,6 +594,7 @@
 				24E3CA202071397E00A48657 /* SeriesViewController.swift in Sources */,
 				24476592288DCD1900313BD0 /* ChannelViewController.swift in Sources */,
 				244765AF288DE5D300313BD0 /* CacheProvider.swift in Sources */,
+				24DBD40328D78BF10016A0AA /* TabBarControllerDisableable.swift in Sources */,
 				2495A303207335BA00561330 /* SeriesCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,11 +609,13 @@
 				2447659D288DD20300313BD0 /* ChannelData.swift in Sources */,
 				244765A9288DDF7400313BD0 /* DIContainer.swift in Sources */,
 				24476590288DCC6C00313BD0 /* RootViewController.swift in Sources */,
+				24DBD40128D7857B0016A0AA /* LiveChannelViewController.swift in Sources */,
 				24E3CA012071337700A48657 /* SecondViewController.swift in Sources */,
 				244765B0288DE5D300313BD0 /* CacheProvider.swift in Sources */,
 				24476596288DD05100313BD0 /* ChannelViewCell.swift in Sources */,
 				24E3C9FD2071337700A48657 /* AppDelegate.swift in Sources */,
 				244765A0288DD58A00313BD0 /* ChannelViewPlayer.swift in Sources */,
+				24DBD40428D78BF10016A0AA /* TabBarControllerDisableable.swift in Sources */,
 				244765AC288DE5BB00313BD0 /* EpisodeCache.swift in Sources */,
 				24476593288DCD1900313BD0 /* ChannelViewController.swift in Sources */,
 				24E3C9FF2071337700A48657 /* FirstViewController.swift in Sources */,
@@ -783,15 +807,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J59B4HGE8U;
+				DEVELOPMENT_TEAM = GX29NBUE3W;
 				INFOPLIST_FILE = "$(SRCROOT)/AppleTV App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rubricsapp.spac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremymassel.spac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.0;
@@ -803,8 +829,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J59B4HGE8U;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/AppleTV App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -812,6 +838,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rubricsapp.spac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 12.0;

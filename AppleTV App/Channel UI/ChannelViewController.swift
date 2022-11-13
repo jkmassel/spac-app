@@ -11,10 +11,7 @@ class ChannelViewController: UINavigationController {
         super.init(rootViewController: ChannelCollectionViewController(channel: channel))
 
         self.tabBarItem = UITabBarItem(title: channel.title, image: nil, tag: 0)
-        
-        if channel.disabledByDefault {
-            self.tabBarItem.isEnabled = false
-        }
+        self.tabBarItem.isEnabled = channel.enabledByDefault
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -35,7 +32,10 @@ class ChannelCollectionViewController: UICollectionViewController {
     private let spinner = UIActivityIndicatorView(style: .whiteLarge)
     var isLoadingEpisodes: Bool = false
 
-    let channelProvider = DIContainer.shared.channelProvider
+    var channelProvider: ChannelProvider {
+        DIContainer.shared.channelProvider
+    }
+
     var episodeCache = EpisodeCache()
 
     init(channel: Channel) {
@@ -72,13 +72,13 @@ class ChannelCollectionViewController: UICollectionViewController {
         }
 
         // Do any additional setup after loading the view.
-        try? self.loadCachedSeries()
-        self.reloadSeries()
+        try? self.loadCachedChannelData()
+        self.reloadChannel()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.reloadSeries()
+        self.reloadChannel()
     }
 
     override var collectionViewLayout: UICollectionViewFlowLayout{
@@ -116,7 +116,7 @@ class ChannelCollectionViewController: UICollectionViewController {
 // MARK: Data Loading
 extension ChannelCollectionViewController {
     
-    func loadCachedSeries() throws {
+    func loadCachedChannelData() throws {
         let episodes = try episodeCache.getEpisodes(forChannel: self.channel)
         guard !episodes.isEmpty else {
             return
@@ -126,10 +126,10 @@ extension ChannelCollectionViewController {
         self.spinner.removeFromSuperview()
     }
 
-    func reloadSeries() {
+    func reloadChannel() {
         
         guard !self.isLoadingEpisodes else {
-            debugPrint("Already loading series – skipping")
+            debugPrint("Already loading channel – skipping")
             return
         }
 
@@ -148,7 +148,7 @@ extension ChannelCollectionViewController {
             self.spinner.removeFromSuperview()
         }
     }
-    
+
     private func setEpisodes(_ episodes: [ChannelEpisode]) {
         self.episodes = SectionedValues([("Episodes", episodes)])
         try? episodeCache.setEpisodes(episodes, forChannel: channel)

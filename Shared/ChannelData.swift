@@ -3,12 +3,14 @@ import Foundation
 struct Channel {
     let id: String
     let title: String
-    let disabledByDefault: Bool
+    let enabledByDefault: Bool
+    let isLiveChannel: Bool
     
-    init(id: String, title: String, disabledByDefault: Bool = false) {
+    init(id: String, title: String, isLiveChannel: Bool = false, enabledByDefault: Bool = true) {
         self.id = id
         self.title = title
-        self.disabledByDefault = disabledByDefault
+        self.isLiveChannel = isLiveChannel
+        self.enabledByDefault = enabledByDefault
     }
 }
 
